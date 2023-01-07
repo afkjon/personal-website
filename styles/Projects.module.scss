@@ -1,0 +1,47 @@
+/* Projects Page styles */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-container {
+  border: 3px solid black;
+  background: #FEFEFE;
+  width: inherit;
+  z-index: 1;
+  border-radius: 10px;
+  filter: drop-shadow(5px 5px 0 black);
+
+  margin: 20px auto;
+}
+
+.card-title {
+  background: var(--accent-color);
+  border-bottom: 2px solid black;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Martel', serif;
+  
+}
+
+.thumbnail {
+  border-bottom: 3px solid black;
+  z-index: 2;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  padding: 20px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+}

@@ -1,0 +1,90 @@
+/* Contact Form */
+.card {
+  padding: 0;
+  margin: 0 auto;
+  border: 2px solid black;
+  background-color: #FEFEFE;
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 10px;
+}
+
+.motivation {
+  background-color: #d67fec;
+  padding: 30px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.form {
+  padding: 20px;
+  margin: 0;
+  @media (min-width: 800px) {
+    padding: 20px;
+    margin: 20px;
+  }
+} 
+
+.label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+.form input {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form input:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+.form textarea {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.form textarea:focus {
+  border: 2px solid blue;
+}
+
+.button {
+  border: 2px solid black;
+  background-color: #f7ca88;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  filter: drop-shadow(5px 5px 0 black);
+}
+
+.button:hover {
+  animation: contactButton 0.2s;
+  transform: scale(120%);
+}
+
+@keyframes contactButton {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(120%);
+  }
+}
