@@ -1,6 +1,6 @@
 require('dotenv').config(); 
 
-export default async function (req, res) {
+export default async function contact(req, res) {
   return new Promise(resolve => {
     let nodemailer = require('nodemailer');
 
