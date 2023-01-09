@@ -1,4 +1,6 @@
 /* Contact Form */
+$card-color: #acecbb;
+
 .card {
   padding: 0;
   margin: 0 auto;
@@ -10,7 +12,7 @@
 }
 
 .motivation {
-  background-color: #d67fec;
+  background-color: $card-color;
   padding: 30px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -73,6 +75,7 @@
   font-size: 1em;
   font-weight: bold;
   filter: drop-shadow(5px 5px 0 black);
+  margin: 0 auto;
 }
 
 .button:hover {

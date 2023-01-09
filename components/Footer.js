@@ -12,9 +12,9 @@ export default function Footer() {
           <li><Link href="/contact">Contact</Link></li>
         </ul>
         <ul className={styles['footer-social-list']}>
-          <li><SocialIcon url="https://twitter.com/translatorjon" bgColor="#FEFEFE" /></li>
-          <li><SocialIcon url="https://github.com/afkjon" bgColor="#FEFEFE" /></li>
-          <li><SocialIcon url="linkedin.com/in/jonathonho/" bgColor="#FEFEFE" /></li>
+          <li><SocialIcon url={process.env.TWITTER_URL} bgColor="#FEFEFE" /></li>
+          <li><SocialIcon url={process.env.GITHUB_URL} bgColor="#FEFEFE" /></li>
+          <li><SocialIcon url={process.env.LINKEDIN_URL} bgColor="#FEFEFE" /></li>
         </ul>
         <div className={styles['footer-copyright']}>Jonathon Ho © 2023</div>
       </div>

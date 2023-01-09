@@ -23,9 +23,9 @@ export default function Navbar() {
         <div className={styles.logo}>
           <Link href="/">
             <Image 
-              src="/icon.png" 
-              width={80}
-              height={50}
+              src="/logo.png" 
+              width={60}
+              height={60}
               alt="logo"
             />
           </Link>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
         <ul className={navbarOpen ? styles.navList + ' ' + styles.navOpen : styles.navList}>
           <li className={styles.navItem} onClick={handleLinkClick}>
-            <Link href="/projects">
+            <Link href="/#projects">
               Projects
             </Link> 
           </li>

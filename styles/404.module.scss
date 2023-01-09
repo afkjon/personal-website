@@ -1,0 +1,52 @@
+.title {
+  padding: 0.5em 1em;
+  background-color: #FEFEFE;
+  border: 2px solid black;
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 0 black);
+  width: 200px;
+  margin: 50px auto 25px auto;
+  text-align: center;
+  font-family: 'Roboto Condensed';
+  animation: buttonPressAnimation 1s;
+  transform: translate(0px, 0px);
+
+  @media(min-width: 800px) {
+    margin-top: 50px;
+  }
+}
+
+.title:hover {
+  transform: translate(5px, 5px);
+}
+
+@keyframes buttonPressAnimation {
+  0% {
+    opacity: 0%;
+    translate: -20%;
+  }
+  100% {
+    opacity: 100%;
+    translate: 0%;
+  }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 1.5rem;
+  border: 1px solid black;
+
+  @media(min-width: 800px) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.link {
+  text-decoration: none;
+  transform: translateX(0);
+}
