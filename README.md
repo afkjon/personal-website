@@ -1,7 +1,7 @@
 # Personal Website
 
 
-This is my front-facing website for personal use.
+This is my front-facing website for personal use. It can be seen [here]().
 
 ## Technologies
 

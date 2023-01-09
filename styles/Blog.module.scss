@@ -1,0 +1,36 @@
+/* Recent Post Thumbnails */
+.title {
+  padding: 0.5em 1em;
+  background-color: #FEFEFE;
+  border: 2px solid black;
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 0 black);
+  width: 300px;
+  margin: 120px auto 25px auto;
+  text-align: center;
+  font-family: 'Roboto Condensed';
+
+  animation: slideInAnimation 1s;
+
+  @media(min-width: 800px) {
+    margin-top: 0;
+  }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.postCard {
+  margin: 0 auto;
+}
+
+.thumbTitle {
+  text-align: center;
+}
+
+.error {
+  font-size: 25px;
+}

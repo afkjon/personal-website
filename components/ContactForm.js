@@ -48,7 +48,7 @@ export default function ContactForm() {
     <div className={aboutStyles.container}>
       <h1 className={aboutStyles.title}>Contact</h1>
       <div className={styles.card}>
-        <p className={styles.motivation}>Shoot me a message and I'll respond promptly!</p>
+        <p className={styles.motivation}>Shoot me a message and I&apos;ll respond promptly!</p>
 
         <form onSubmit={handleSubmit(onSubmit, onError)} className={styles.form}>
           <div className={styles.details}>

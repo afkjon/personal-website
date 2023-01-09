@@ -9,7 +9,7 @@ export default function Home() {
       
       <section className={styles.hero}>
         <div>
-          <h1 className={styles.greeting}>Hello, I'm Jonathon!</h1>
+          <h1 className={styles.greeting}>Hello, I&apos;m Jonathon!</h1>
           <div className={styles.blockTitle}>Software Developer</div>
           <div className={styles.blockTitle}>J-E Translator</div>
           <p className={styles.description}></p>
@@ -30,7 +30,6 @@ export default function Home() {
               <h2>Frontend Technologies</h2>
               <ul>
                 <li>React.js and Next.js</li>
-                <li></li>
               </ul>
             </div>
             <div className={styles.card}>
