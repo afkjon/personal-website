@@ -47,13 +47,11 @@ export default function Navbar() {
               About
             </Link>
           </li>
-          {/*
           <li className={styles.navItem} onClick={handleLinkClick}>
-            <Link href="/">
+            <Link href="/blog">
               Blog
             </Link>
           </li>
-          */}
           <li className={styles.navItem} onClick={handleLinkClick}>
             <Link href="/contact">
               Contact

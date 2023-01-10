@@ -1,5 +1,6 @@
 require('dotenv').config(); 
 
+// Handles /contact API requests
 export default async function handler(req, res) {
   let nodemailer = require('nodemailer');
 
@@ -22,6 +23,7 @@ export default async function handler(req, res) {
     } 
   });
 
+  // Construct Email wtih data
   const mailData = {
     from: process.env.CONTACT_FORM_EMAIL,
     to: process.env.CONTACT_FORM_INBOX_EMAIL,
@@ -37,6 +39,8 @@ export default async function handler(req, res) {
         console.log(err)
       else {
         console.log(info);
+
+        // Send a response back to the user
         res.status(200)
           .send({message: 'Your message was sent successfully!'});
         return resolve();

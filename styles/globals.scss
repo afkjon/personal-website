@@ -8,6 +8,7 @@
   --background-color: #e4d9f0;
   --foreground-color: #FEFEFE;
   --accent-color: #66cc99;
+  --secondary-accent-color: #ec9ada;
 }
 
 * {
@@ -36,7 +37,7 @@ main {
   margin: 0 auto;
 
   @media (min-width: 800px) {
-    padding: 6vh 0;
+    padding: 0;
     margin: 0 auto;
   }
 }
@@ -50,6 +51,19 @@ a:hover {
 }
 
 /* Buttons */
+
+button.btn-google {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  filter: drop-shadow(3px 3px 0 black);
+  margin: 1em auto;
+}
+
+.btn-google img {
+  width: 30px;
+  margin-right: 10px;
+}
 
 .btn, button {
   background-color: var(--color-gray);
@@ -89,4 +103,18 @@ a:hover {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Blog Background */
+
+.blog-background {
+  background: #FEFEFE;
+  min-height: 1080px;
 }

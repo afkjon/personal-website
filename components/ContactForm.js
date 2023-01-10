@@ -45,45 +45,48 @@ export default function ContactForm() {
   }
 
   return (
-    <div className={aboutStyles.container}>
+    <>
       <h1 className={aboutStyles.title}>Contact</h1>
-      <div className={styles.card}>
-        <p className={styles.motivation}>Shoot me a message and I&apos;ll respond promptly!</p>
-
-        <form onSubmit={handleSubmit(onSubmit, onError)} className={styles.form}>
-          <div className={styles.details}>
-            <label className={styles.label}>
-              Name
-              <input {...register('name', {
-                required:  { value: true, message: 'Your name is required.' },
-                maxLength: { value: 100, message: 'Your name is too long (Use a nickname)' },
-                minLength: { value: 3, message: 'Your name is too short' },
-              })} />
-            </label>
+      <div className="container">
         
-            <label className={styles.label}>
-              Email Address
-              <input {...register('email', {
-              required: { value: true, message: 'Please enter your email.' },
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: "Entered value does not match email format"
-              }
-              })} />
-            </label>
+        <div className={styles.card}>
+          <p className={styles.motivation}>Shoot me a message and I&apos;ll respond promptly!</p>
 
-            <label className={styles.label}>
-              Message
-              <textarea {...register('message', {
-                required: { value: true, message: 'Please type a message' },
-                minLength: { value: 10, message: 'Your message is too short.' } 
-              })} />
-            </label>
+          <form onSubmit={handleSubmit(onSubmit, onError)} className={styles.form}>
+            <div className={styles.details}>
+              <label className={styles.label}>
+                Name
+                <input {...register('name', {
+                  required:  { value: true, message: 'Your name is required.' },
+                  maxLength: { value: 100, message: 'Your name is too long (Use a nickname)' },
+                  minLength: { value: 3, message: 'Your name is too short' },
+                })} />
+              </label>
+          
+              <label className={styles.label}>
+                Email Address
+                <input {...register('email', {
+                required: { value: true, message: 'Please enter your email.' },
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: "Entered value does not match email format"
+                }
+                })} />
+              </label>
 
-            <button type="submit" className={styles.button}>Send Message</button>
-          </div>
-        </form>
+              <label className={styles.label}>
+                Message
+                <textarea {...register('message', {
+                  required: { value: true, message: 'Please type a message' },
+                  minLength: { value: 10, message: 'Your message is too short.' } 
+                })} />
+              </label>
+
+              <button type="submit" className={styles.button}>Send Message</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
