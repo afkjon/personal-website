@@ -71,16 +71,7 @@ export default function Post(props) {
             <PostContent post={post} />
           </section>
 
-          <aside className="card">          
-            <AuthCheck
-              fallback={
-                <Link href="/enter">
-                  <button>Sign Up</button>
-                </Link>
-              }
-            >
-            </AuthCheck>
-            
+          <aside className="card">
             { currentUser?.uid === post.uid && (
               <Link href={`/admin/${post.slug}`}>
                 <button className={styles.button}>Edit Post</button>
