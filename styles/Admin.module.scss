@@ -11,14 +11,8 @@
 
 .container aside {
   display: flex;
-  flex-direction: column;
-  width: 20%;
-  min-width: 250px;
-  min-height: 200px;
-  text-align: center;
-  position: sticky;
-  top: 80px;
-  height: 0;
+  flex-direction: inherit;
+  justify-content: flex-start;
 }
 
 .hidden {
@@ -119,8 +113,9 @@
 .toolsLabel {
   margin: 0;
   text-align: center;
+  padding: 0;
 
-  @media(min-width: 8000px) {
+  @media(min-width: 800px) {
     text-align: left;
   }
 }

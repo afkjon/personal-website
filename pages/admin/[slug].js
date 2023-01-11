@@ -28,6 +28,19 @@ function PostManager() {
   const postRef = firestore.collection('users').doc(auth.currentUser.uid).collection('posts').doc(slug);
   const [post] = useDocumentData(postRef);
 
+  const handleDelete = () => {
+    try {
+      postRef.get()
+        .then(function(querySnapshot) {
+          querySnapshot.ref.delete();
+        });
+      toast("Post deleted!");
+      router.push('/admin');
+     } catch (error) {
+      toast(error);
+     }
+  }
+
   return (
     <main className={styles.container}>
       {post && (
@@ -46,6 +59,10 @@ function PostManager() {
               <Link href={`/${post.username}/${post.slug}`}>
                 <button className={styles.button}>Live view</button>
               </Link>
+              <button className={styles.button} onClick={() => {
+                if (window.confirm('Are you sure you want to delete this post?'))
+                  handleDelete();
+              }}>Delete Post</button>
             </div>
           </aside>
         </>

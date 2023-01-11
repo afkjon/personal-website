@@ -35,6 +35,7 @@
 
 .postDeck {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .postCard {
@@ -88,4 +89,17 @@
 .button:hover {
   animation: contactButton 0.2s;
   transform: scale(120%);
+}
+
+
+.status {
+  font-size: 20px;
+}
+.success {
+  color: green;
+  font-size: 20px;
+}
+
+.danger {
+  color: red;
 }

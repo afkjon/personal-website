@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Metatags from '../../components/Metatags';
 import styles from '../../styles/Blog.module.scss'
 import { getUserWithUsername, postToJSON } from '../../lib/firebase';
@@ -20,33 +21,53 @@ export async function getServerSideProps({ query }) {
   let user = null;
   let posts = null;
 
+  // Get recent Posts
   if (userDoc) {
     user = userDoc.data();
     const postsQuery = userDoc.ref
       .collection('posts')
       .where('published', '==', true)
-      .orderBy('createdAt', 'desc')
-      .limit(5);
+      .orderBy('createdAt', 'desc');
     posts = (await postsQuery.get()).docs.map(postToJSON);
   }
 
   return {
-    props: { user, posts }, // will be passed to the page component as props
+    // Passed to the page component as props
+    props: { user, posts }, 
   };
 }
 
 export default function BlogPage(props) {
+  const [posts, setPosts] = useState(props.posts.slice(0, 6))
+  const [index, setIndex] = useState(0);
+  
+  const getNextPage = () => {
+    try {
+      console.log(...posts);
+      setPosts([...posts, ...props.posts.slice(6 + 6 * index)]);
+      setIndex(index + 1);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return(
     <main>
       <Metatags title="Blog" />
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.container}>
         <div className={styles.postDeck}>
-          {/* Paginate posts limit 9/page */}
-          {props.posts ?
-            <PostFeed posts={props.posts} />
-            :
-            <div className={styles.error}>Sorry, there are no posts yet!</div>
+          {/* Initial Post limit 6 */}
+          { posts.length < props.posts.length ?
+            <>
+              <PostFeed posts={posts} />
+              <button className={styles.button} onClick={getNextPage}>
+                More Posts
+              </button> 
+            </>
+          : posts.length > 0 ?
+            <PostFeed posts={posts} />
+          : <div className={styles.error}>Sorry, there are no posts yet!</div>  
           }
         </div>
       </div>

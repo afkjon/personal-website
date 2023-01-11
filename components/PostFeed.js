@@ -2,7 +2,14 @@ import Link from 'next/link';
 import styles from '../styles/Blog.module.scss'
 
 export default function PostFeed({ posts, admin }) {
-  return posts ? posts.map((post) => <PostItem post={post} key={post.slug} admin={admin} />) : null;
+  return (
+    <div className={styles.postDeck}>
+      {posts ?
+        posts.map((post) => <PostItem post={post} key={post.slug} admin={admin} />)
+        : null
+      }
+    </div>
+  );
 }
 
 function PostItem({ post, admin = false }){
@@ -11,8 +18,7 @@ function PostItem({ post, admin = false }){
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
   return (
-    <div className={styles.postCard}>
-      <strong>By {post.username}</strong>
+    <div className={styles.postCard }>
       <Link href={`/blog/${post.slug}`}>
         <h2>{post.title}</h2>
       </Link>
@@ -29,7 +35,7 @@ function PostItem({ post, admin = false }){
           <Link href={`/admin/${post.slug}`}>
             <button className={styles.button}>Edit</button>
           </Link>
-          {post.published ? <p className={styles.success}>Live</p> : <p className={styles.danger}>Unpublished</p>}
+          <div className={styles.status}>Status: {post.published ? <span className={styles.success}>Published</span> : <span className={styles.danger}>Unpublished</span>}</div>
         </>
       )}
     </div>
