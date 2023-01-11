@@ -7,7 +7,6 @@ import PostFeed from '../../components/PostFeed';
 
 export async function getServerSideProps({ query }) {
   const username = 'Jonathon';
-
   const userDoc = await getUserWithUsername(username);
 
   // If no user, short circuit to 404 page
@@ -56,20 +55,18 @@ export default function BlogPage(props) {
       <Metatags title="Blog" />
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.container}>
-        <div className={styles.postDeck}>
-          {/* Initial Post limit 6 */}
-          { posts.length < props.posts.length ?
-            <>
-              <PostFeed posts={posts} />
-              <button className={styles.button} onClick={getNextPage}>
-                More Posts
-              </button> 
-            </>
-          : posts.length > 0 ?
+        {/* Initial Post limit 6 */}
+        { posts.length < props.posts.length ?
+          <>
             <PostFeed posts={posts} />
-          : <div className={styles.error}>Sorry, there are no posts yet!</div>  
-          }
-        </div>
+            <button className={styles.button} onClick={getNextPage}>
+              More Posts
+            </button> 
+          </>
+        : posts.length > 0 ?
+          <PostFeed posts={posts} />
+        : <div className={styles.error}>Sorry, there are no posts yet!</div>  
+        }
       </div>
     </main>
   );

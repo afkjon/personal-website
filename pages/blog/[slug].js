@@ -1,15 +1,13 @@
-import styles from '../../styles/Admin.module.scss';
-import PostContent from '../../components/PostContent';
+import Link from 'next/link';
+import { useContext } from 'react';
+import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { firestore, getUserWithUsername, postToJSON } from "../../lib/firebase";
 
-import { useDocumentData } from 'react-firebase-hooks/firestore';
-
-import AuthCheck from '../../components/AuthCheck';
+import styles from '../../styles/Admin.module.scss';
+import PostContent from '../../components/PostContent';
 import Metatags from  '../../components/Metatags';
-import Link from 'next/link';
-
 import { UserContext } from '../../lib/context';
-import { useContext } from 'react';
+
 
 export async function getStaticProps({ params }) {
   const { slug } = params;

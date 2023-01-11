@@ -56,7 +56,7 @@ function PostManager() {
             <h3 className={styles.toolsLabel}>Tools:</h3>
             <div className={styles.tools}>
               <button className={styles.button} onClick={() => setPreview(!preview)}>{preview ? 'Edit' : 'Preview'}</button>
-              <Link href={`/${post.username}/${post.slug}`}>
+              <Link href={`/blog/${post.slug}`}>
                 <button className={styles.button}>Live view</button>
               </Link>
               <button className={styles.button} onClick={() => {

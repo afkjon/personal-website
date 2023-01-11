@@ -50,8 +50,35 @@
 
 .postTitle {
   margin: 0.8em 0;
+  padding: 0.5em;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-size: 35px;
+  background-color: var(--accent-color);
+  filter: drop-shadow(4px 4px 0 black);
+}
+
+.date {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .content {
   margin: 1em 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.content h1 {
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px 0;
+}
+
+.content img {
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  object-fit: contain;
 }
