@@ -78,8 +78,15 @@ export default function Home() {
           <div className={styles.projectCard}>
             <div className={styles.projectCardContainer}>
               <div className={styles.projectDescription}>
-              <h1 className={styles.projectTitle}>Portfolio Website (This Website!)</h1>
-              <p>Built with Next.js and Firestore, this portfolio and blog, featuring an admin sign in panel is a vehicle to show off my recent work.</p>
+              <h1 className={styles.projectTitle}>Portfolio Website</h1>
+              <p>Built with Next.js and Firestore, this portfolio and blog with a responsive UI, featuring an admin sign in panel and post management system, is a vehicle to show off my recent work.</p>
+                <div className={styles.projectTags}>
+                  <ul>
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Firebase</li>
+                  </ul>
+                </div>
                 <div className={styles.projectLinkContainer}>
                   <Link href="https://github.com/afkjon/personal-website">View on GitHub</Link>
                 </div>

@@ -5,9 +5,10 @@ export default function Metatags({
   description = 'Personal website of Jonathon Ho.',
   image = '',
 }) {
+  const displayedTitle = `${title} | Jonathon Ho`;
   return (
     <Head>
-      <title>{title} | Jonathon Ho</title>
+      <title>{displayedTitle}</title>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@translatorjon" />
       <meta name="twitter:title" content={title} />
