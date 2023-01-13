@@ -1,7 +1,7 @@
-import Link from "next/link"
-import styles from "../styles/Navbar.module.scss"
-import Image from "next/image"
-import { useState } from 'react'
+import Link from "next/link";
+import styles from "../styles/Navbar.module.scss";
+import Image from "next/image";
+import { useState } from 'react';
 
 // Top Navbar Component
 export default function Navbar() {
@@ -60,5 +60,5 @@ export default function Navbar() {
         </ul>
       </div>
     </nav>
-  )
+  );
 }

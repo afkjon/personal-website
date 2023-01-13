@@ -3,6 +3,7 @@ import { useContext, useState, useEffect, useCallback } from 'react';
 import { UserContext } from '../lib/context';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
+import Image from 'next/image'
 import styles from '../styles/Enter.module.scss';
 
 import debounce from 'lodash.debounce';
@@ -44,7 +45,12 @@ function SignInButton() {
     <>
       <h2>Please login!</h2>
       <button className="btn-google" onClick={signInWithGoogle}>
-        <img src={'/google.png'} /> Sign in with Google
+        <Image
+          src={'/google.png'}
+          alt='Google logo'
+          width={30}
+          height={30}
+        /> Sign in with Google
       </button>
     </>
   );
@@ -102,11 +108,6 @@ function UsernameForm() {
     }
   }
 
-  //
-  useEffect(() => {
-    checkUsername(formValue);
-  }, [formValue]);
-
   // Hit the database for username match after each debounced change
   // useCallback is required for debounce to work
   const checkUsername = useCallback(
@@ -121,6 +122,10 @@ function UsernameForm() {
     }, 500),
     []
   );
+
+  useEffect(() => {
+    checkUsername(formValue);
+  }, [formValue]);
 
   return (
     !username && (

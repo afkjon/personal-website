@@ -9,5 +9,4 @@ describe('personal website test', () => {
     
     cy.get('button').contains('Sign in with Google');
   });
-
 })

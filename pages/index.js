@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Metatags from '../components/Metatags'
 import ContactForm from '../components/ContactForm'
@@ -15,10 +16,15 @@ export default function Home() {
           <div className={styles.blockTitle}>J-E Translator</div>
           <p className={styles.description}></p>
         </div>
-
-        <img className={styles.image} 
-          src="https://via.placeholder.com/300px"
+        <img className={styles.image} src="https://via.placeholder.com/300px"></img>
+        {/* 
+        <Image className={styles.image}
+          alt="placeholder image"
+          href="https://via.placeholder.com/300px"
+          width={300}
+          height={300}
         />
+        */}
         <div className={styles.break}></div>
       </section>
 

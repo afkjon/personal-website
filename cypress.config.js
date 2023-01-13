@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   // The rest of the Cypress config options go here...
@@ -14,5 +14,12 @@ module.exports = {
     googleRefreshToken: process.env.GOOGLE_REFRESH_TOKEN,
     googleClientId: process.env.REACT_APP_GOOGLE_CLIENTID,
     googleClientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
+  },
+
+  component: {
+    devServer: {
+      framework: "next",
+      bundler: "webpack",
+    },
   },
 };

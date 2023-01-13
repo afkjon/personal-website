@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import styles from '../styles/Footer.module.scss'
-import { SocialIcon } from 'react-social-icons'
+import Link from 'next/link';
+import styles from '../styles/Footer.module.scss';
+import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
   return (
@@ -20,5 +20,5 @@ export default function Footer() {
         <div className={styles['footer-copyright']}>Jonathon Ho © 2023</div>
       </div>
     </footer>
-  )
+  );
 }

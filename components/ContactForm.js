@@ -45,7 +45,7 @@ export default function ContactForm() {
     } else if (data.email) {
       msg = data.email.message;
     } else {
-      msg = message.message;
+      msg = data.message.message;
     }
 
     toast('Error: ' + msg, {
