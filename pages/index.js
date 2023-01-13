@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Metatags from '../components/Metatags'
 import ContactForm from '../components/ContactForm'
+import photo from '../public/photo.jpg'
 import projectPic1 from '../public/projectMockOne.png'
 
 export default function Home() {
@@ -17,15 +18,10 @@ export default function Home() {
           <div className={styles.blockTitle}>J-E Translator</div>
           <p className={styles.description}></p>
         </div>
-        <img className={styles.image} src="https://via.placeholder.com/300px"></img>
-        {/* 
         <Image className={styles.image}
           alt="placeholder image"
-          href="https://via.placeholder.com/300px"
-          width={300}
-          height={300}
+          src={photo}
         />
-        */}
         <div className={styles.break}></div>
       </section>
 
