@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Metatags from '../components/Metatags'
 import ContactForm from '../components/ContactForm'
+import projectPic1 from '../public/projectMockOne.png'
 
 export default function Home() {
   return (
@@ -79,14 +80,19 @@ export default function Home() {
                     <li>React.js</li>
                     <li>Next.js</li>
                     <li>Firebase</li>
+                    <li>Cypress</li>
                   </ul>
                 </div>
                 <div className={styles.projectLinkContainer}>
                   <Link href="https://github.com/afkjon/personal-website">View on GitHub</Link>
                 </div>
               </div>
-              <img className={styles.projectThumbnail} 
-                  src="https://via.placeholder.com/300"
+              <Image 
+                src={projectPic1}
+                alt="A mockup of my project"
+                width='auto'
+                height={400}
+                className={styles.projectThumbnail}
               />
             </div>
           </div>
