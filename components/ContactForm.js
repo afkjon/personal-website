@@ -37,7 +37,18 @@ export default function ContactForm() {
   }
 
   const onError = (data, e) => {
-    toast('Error: ' + errors.message.message, {
+    e.preventDefault();
+    let msg = '';
+    
+    if (data.name) {
+      msg = data.name.message;
+    } else if (data.email) {
+      msg = data.email.message;
+    } else {
+      msg = message.message;
+    }
+
+    toast('Error: ' + msg, {
       style: {
         border: '2px solid rgba(250, 77, 77, 0.8)',
       }

@@ -1,6 +1,7 @@
-import Metatags from '../components/Metatags'
-import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
+import styles from '../styles/Home.module.scss'
+import Metatags from '../components/Metatags'
+import ContactForm from '../components/ContactForm'
 
 export default function Home() {
   return (
@@ -24,12 +25,13 @@ export default function Home() {
       {/* Skills Section */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <h1 className={styles.blockTitle}>Skills</h1>
+          <h1 className={styles.blockTitle}>Technical Skills</h1>
           <div className={styles.deck}>
             <div className={styles.card}>
               <h2>Frontend Technologies</h2>
               <ul>
                 <li>React.js and Next.js</li>
+                <li></li>
               </ul>
             </div>
             <div className={styles.card}>
@@ -39,6 +41,7 @@ export default function Home() {
                 <li>Express</li>
                 <li>Firestore</li>
                 <li>MongoDB</li>
+                <li>RESTful APIs</li>
                 <li>Relational Databases</li>
               </ul>
             </div>
@@ -57,22 +60,7 @@ export default function Home() {
       <section className={styles.section + ' ' + styles.projectSection} id="projects">
         <div className={styles.projectContainer}>
           <h1 className={styles.blockTitle}>Recent Projects</h1>
-          {/* Project One 
-          <div className={styles.projectCard}>
-            <div className={styles.projectCardContainer}>
-              <img className={styles.projectThumbnail} 
-                  src="https://via.placeholder.com/300"
-              />
-              <div className={styles.projectDescription}>
-                <h1 className={styles.projectTitle}>Portfolio Website</h1>
-                <p>Built with Next.js and Firestore, this portfolio and blog, featuring an admin sign in panel is a vehicle to show off my recent work.</p>
-                <div className={styles.projectLinkContainer}>
-                  <Link href="/">View on GitHub</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          */}
+          {/* Project One }
 
           {/* Project Two */}
           <div className={styles.projectCard}>
@@ -99,7 +87,8 @@ export default function Home() {
         </div>
       </section>
       
-      { /* Post Feed */ }
+      { /* Contact Form */ }
+      <ContactForm />
 
     </main>
   )

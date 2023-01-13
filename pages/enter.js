@@ -1,8 +1,9 @@
 import { auth, firestore, googleAuthProvider } from '../lib/firebase';
 import { useContext, useState, useEffect, useCallback } from 'react';
 import { UserContext } from '../lib/context';
+import toast from 'react-hot-toast';
 import Link from 'next/link';
-import styles from '../styles/Enter.module.scss'
+import styles from '../styles/Enter.module.scss';
 
 import debounce from 'lodash.debounce';
 
@@ -33,7 +34,10 @@ export default function EnterPage({ }) {
 // Sign in with Google button
 function SignInButton() {
   const signInWithGoogle = async () => {
-    await auth.signInWithPopup(googleAuthProvider);
+    try { await auth.signInWithPopup(googleAuthProvider);
+    } catch(error)  {
+      toast('Sign in failed!');
+    }
   };
 
   return (
