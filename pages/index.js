@@ -15,8 +15,8 @@ export default function Home() {
         <div>
           <h1 className={styles.greeting}>Hello, I&apos;m Jonathon!</h1>
           <div className={styles.blockTitle}>Software Developer</div>
-          <div className={styles.blockTitle}>J-E Translator</div>
-          <p className={styles.description}></p>
+          <div className={styles.blockTitle}>Japanese to English Translator</div>
+          <p className={styles.description}>A great fit for teams with a focus on globalization!</p>
         </div>
         <Image className={styles.image}
           alt="placeholder image"
