@@ -19,7 +19,10 @@ export default function EnterPage({ }) {
       <div className={"container " + styles.shift}>
       {user ? 
         !username ? 
-          <UsernameForm /> : 
+          <>
+          <UsernameForm />
+          <SignOutButton />
+          </> : 
           <>
             <SignOutButton />
             <Link href="/admin" className={styles.link}><button className={styles.button}>Admin Page</button></Link>
