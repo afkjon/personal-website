@@ -55,13 +55,14 @@ export default function BlogPage(props) {
       <Metatags title="Blog" />
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.container}>
-        <ConditionalFeed />
+        <ConditionalFeed posts={posts}/>
       </div>
     </main>
   );
 }
 
-const ConditionalFeed = () => {
+const ConditionalFeed = (props) => {
+  const posts = props.posts
   if (posts.length < props.posts.length)
     return (
       <>
