@@ -14,7 +14,7 @@ export default function Home() {
 
       <section className={styles.hero}>
         <div>
-          <h1 className={styles.greeting}>Hello, I&apos;m Jonathon! I'm a...</h1>
+          <h1 className={styles.greeting}>Hello, I&apos;m Jonathon! I&apos;m a...</h1>
           <div className={styles.blockTitle}>Software Developer</div>
           <div className={styles.blockTitle}>Japanese to English Translator</div>
           <p className={styles.description}>I am currently looking for work!</p>
