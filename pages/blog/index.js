@@ -15,7 +15,7 @@ export async function getServerSideProps({ query }) {
       notFound: true,
     };
   }
-  
+
   // JSON serializable data
   let user = null;
   let posts = null;
@@ -32,14 +32,14 @@ export async function getServerSideProps({ query }) {
 
   return {
     // Passed to the page component as props
-    props: { user, posts }, 
+    props: { user, posts },
   };
 }
 
 export default function BlogPage(props) {
   const [posts, setPosts] = useState(props.posts.slice(0, 6))
   const [index, setIndex] = useState(0);
-  
+
   const getNextPage = () => {
     try {
       console.log(...posts);
@@ -50,24 +50,28 @@ export default function BlogPage(props) {
     }
   }
 
-  return(
+  return (
     <main>
       <Metatags title="Blog" />
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.container}>
-        {/* Initial Post limit 6 */}
-        { posts.length < props.posts.length ?
-          <>
-            <PostFeed posts={posts} />
-            <button className={styles.button} onClick={getNextPage}>
-              More Posts
-            </button> 
-          </>
-        : posts.length > 0 ?
-          <PostFeed posts={posts} />
-        : <div className={styles.error}>Sorry, there are no posts yet!</div>  
-        }
+        <ConditionalFeed />
       </div>
     </main>
   );
+}
+
+const ConditionalFeed = () => {
+  if (posts.length < props.posts.length)
+    return (
+      <>
+        <PostFeed posts={posts} />
+        <button className={styles.button} onClick={getNextPage}>
+          More Posts
+        </button>
+      </>);
+  else if (posts.length > 0)
+    return <PostFeed posts={posts} />;
+  else
+    return <div className={styles.error}>Sorry, there are no posts yet!</div>;
 }

@@ -8,7 +8,7 @@ import styles from '../styles/Enter.module.scss';
 
 import debounce from 'lodash.debounce';
 
-export default function EnterPage({ }) {
+export default function EnterPage() {
   const { user, username } = useContext(UserContext);
 
   // 1. user signed out <SignInButton />
@@ -17,19 +17,19 @@ export default function EnterPage({ }) {
   return (
     <main>
       <div className={"container " + styles.shift}>
-      {user ? 
-        !username ? 
-          <>
-          <UsernameForm />
-          <SignOutButton />
-          </> : 
-          <>
-            <SignOutButton />
-            <Link href="/admin" className={styles.link}><button className={styles.button}>Admin Page</button></Link>
-          </>
-        : 
-        <SignInButton />
-      }
+        {user ?
+          !username ?
+            <>
+              <UsernameForm />
+              <SignOutButton />
+            </> :
+            <>
+              <SignOutButton />
+              <Link href="/admin" className={styles.link}><button className={styles.button}>Admin Page</button></Link>
+            </>
+          :
+          <SignInButton />
+        }
       </div>
     </main>
   );
@@ -38,8 +38,9 @@ export default function EnterPage({ }) {
 // Sign in with Google button
 function SignInButton() {
   const signInWithGoogle = async () => {
-    try { await auth.signInWithPopup(googleAuthProvider);
-    } catch(error)  {
+    try {
+      await auth.signInWithPopup(googleAuthProvider);
+    } catch (error) {
       toast('Sign in failed!');
     }
   };
@@ -70,8 +71,8 @@ function UsernameForm() {
   const [loading, setLoading] = useState(false);
 
   const { user, username } = useContext(UserContext);
-  
-  const onSubmit = async(e) => {
+
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     // Create refs for both documents
@@ -80,14 +81,15 @@ function UsernameForm() {
 
     // Commit both docs together as a batch write.
     const batch = firestore.batch();
-    batch.set(userDoc, 
-      { username: formValue, 
-        photoURL : user.photoURL, 
+    batch.set(userDoc,
+      {
+        username: formValue,
+        photoURL: user.photoURL,
         displayName: user.displayName
       }
     );
 
-    batch.set(usernameDoc, {uid: user.uid});
+    batch.set(usernameDoc, { uid: user.uid });
 
     await batch.commit();
   };
@@ -132,11 +134,11 @@ function UsernameForm() {
 
   return (
     !username && (
-    <section>
-      <h3>Choose Username</h3>
-      <form onSubmit={onSubmit}>
-        <input className={styles.input} name="username" placeholder='myusername' value={formValue} onChange={onChange} />
-        <UsernameMessage username={formValue} isValid={isValid} loading={loading} />
+      <section>
+        <h3>Choose Username</h3>
+        <form onSubmit={onSubmit}>
+          <input className={styles.input} name="username" placeholder='myusername' value={formValue} onChange={onChange} />
+          <UsernameMessage username={formValue} isValid={isValid} loading={loading} />
           <button type="submit" className={styles.button} disabled={!isValid}>
             Choose
           </button>
@@ -151,7 +153,7 @@ function UsernameMessage({ username, isValid, loading }) {
     return <p>Checking...</p>;
   } else if (isValid) {
     return <p className="text-success">{username} is available!</p>;
-  } else if (username && !isValid) {  
+  } else if (username && !isValid) {
     return <p className="text-danger">That username is taken or cannot be used!</p>;
   } else {
     return <p></p>;
