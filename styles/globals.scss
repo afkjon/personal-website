@@ -2,10 +2,11 @@
   
 :root {
   --max-width: 1080px;
-  --background-color: #e4d9f0;
+  --background-color: #fdf1de;
   --foreground-color: #FEFEFE;
   --accent-color: #66cc99;
   --secondary-accent-color: #ec9ada;
+  --link-color: rgb(184, 62, 93);
 }
 
 * {
@@ -40,6 +41,14 @@ main {
 }
 
 a {
+  color: var(--link-color);
+}
+
+nav a {
+  color: inherit;
+}
+
+footer a {
   color: inherit;
 }
 
