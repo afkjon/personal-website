@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import { Toaster } from 'react-hot-toast'
 import { useUserData } from '../lib/hooks';
 import { UserContext } from '../lib/context';
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   const userData = useUserData();
