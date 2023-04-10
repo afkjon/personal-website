@@ -34,29 +34,29 @@ export default function Home() {
           <h1 className={styles.blockTitle}>Technical Skills</h1>
           <div className={styles.deck}>
             <div className={styles.card}>
-              <h2>Frontend Technologies</h2>
+              <h2>Programming Languages</h2>
               <ul>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-                <li>jQuery</li>
+                <li>Typescript</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Python</li>
               </ul>
             </div>
             <div className={styles.card}>
-              <h2>Backend Technologies</h2>
+              <h2>Technologies</h2>
               <ul>
-                <li>Node.js and Express.js</li>
-                <li>Next.js</li>
-                <li>tRPC</li>
-                <li>REST APIs</li>
+                <li>React and Next.js</li>
+                <li>Vanilla CSS, Tailwind CSS, Sass, jQuery</li>
+                <li>tRPC, GraphQL, REST APIs</li>
                 <li>SQL/NoSQL Databases</li>
               </ul>
             </div>
             <div className={styles.card}>
-              <h2>Other Technologies</h2>
+              <h2>Other Tooling</h2>
               <ul>
-                <li>Docker</li>
                 <li>Git and GitHub</li>
                 <li>VS Code & Extensions</li>
+                <li>Docker</li>
                 <li>Figma & Adobe Photoshop</li>
                 <li>Excel VBA</li>
               </ul>
