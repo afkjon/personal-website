@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import { Toaster } from 'react-hot-toast'
 import { useUserData } from '../lib/hooks';
 import { UserContext } from '../lib/context';
+import { Analytics } from '@vercel/analytics';
 
 export default function App({ Component, pageProps }) {
   const userData = useUserData();
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
+      <Analytics />
       <Toaster />
     </UserContext.Provider>
   );
