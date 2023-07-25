@@ -1,11 +1,11 @@
 /* Contact Form */
-$card-color: #acecbb;
+$card-color: #7FB069;
 
 .card {
   padding: 0;
   margin: 0 auto;
   border: 2px solid black;
-  background-color: #FEFEFE;
+  background-color: var(--foreground-color);
   width: 100%;
   max-width: 1080px;
   border-radius: 10px;
@@ -79,7 +79,7 @@ $card-color: #acecbb;
 /* Button Styles */
 .button {
   border: 2px solid black;
-  background-color: #f7ca88;
+  background-color: var(--accent-color);
   font-family: 'Courier New', Courier, monospace;
   font-size: 1em;
   font-weight: bold;

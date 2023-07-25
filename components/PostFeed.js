@@ -18,7 +18,7 @@ function PostItem({ post, admin = false }){
   const minutesToRead = (wordCount / 100 + 1).toFixed(0);
 
   return (
-    <div className={styles.postCard }>
+    <p>
       <Link href={`/blog/${post.slug}`}>
         <h2>{post.title}</h2>
       </Link>
@@ -38,6 +38,6 @@ function PostItem({ post, admin = false }){
           <div className={styles.status}>Status: {post.published ? <span className={styles.success}>Published</span> : <span className={styles.danger}>Unpublished</span>}</div>
         </>
       )}
-    </div>
+    </p>
   );
 }

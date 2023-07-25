@@ -22,7 +22,7 @@
 
 .navbar {
   top: 0;
-  background: #FEFEFE;
+  background-color: var(--navbar-color);
   border-bottom: 3px solid black;
   position: fixed;
   width: 100%;
@@ -92,7 +92,7 @@
 
 /* Hamburger Menu */
 .navList {
-  background-color: #FEFEFE;
+  background-color: inherit;
   list-style: none;
   height: 100vw;
   position: absolute;

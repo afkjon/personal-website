@@ -9,7 +9,7 @@
 
 .card-container {
   border: 3px solid black;
-  background: #FEFEFE;
+  background: var(--foreground-color);
   width: inherit;
   z-index: 1;
   border-radius: 10px;

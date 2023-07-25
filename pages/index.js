@@ -14,10 +14,9 @@ export default function Home() {
 
       <section className={styles.hero}>
         <div>
-          <h1 className={styles.greeting}>Hello, I&apos;m Jonathon! I&apos;m a...</h1>
-          <div className={styles.blockTitle}>Software Developer</div>
-          <div className={styles.blockTitle}>Japanese to English Translator</div>
-          <p className={styles.description}>I am currently looking for work!</p>
+          <h1 className={styles.greeting}>Jonathon Ho</h1>
+          <div className={styles.blockTitle}>Japanese Translator and Interpreter</div>
+          <div className={styles.blockTitle}>Software Engineer</div>
         </div>
         <Image className={styles.image}
           alt="placeholder image"
@@ -31,34 +30,32 @@ export default function Home() {
       {/* Skills Section */}
       <section className={styles.section}>
         <div className={styles.container}>
-          <h1 className={styles.blockTitle}>Technical Skills</h1>
+          <h1 className={styles.blockTitle}>Skills</h1>
           <div className={styles.deck}>
             <div className={styles.card}>
-              <h2>Programming Languages</h2>
+              <h2>Skills</h2>
               <ul>
-                <li>Typescript</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>Python</li>
+                <li>Web Development</li>
+                <li>Database Development</li>
+                <li>Database Development</li>
               </ul>
+              <h2>Technical Skills</h2>
             </div>
             <div className={styles.card}>
-              <h2>Technologies</h2>
               <ul>
-                <li>React and Next.js</li>
-                <li>Vanilla CSS, Tailwind CSS, Sass, jQuery</li>
+                <li>Typescript, Java, C#, Python</li>
+                <li>React and Next.js, Vanilla CSS, Tailwind CSS, Sass, jQuery</li>
                 <li>tRPC, GraphQL, REST APIs</li>
-                <li>SQL/NoSQL Databases</li>
+                <li>Oracle, Postgres, MySQL, MongoDB</li>
               </ul>
             </div>
             <div className={styles.card}>
-              <h2>Other Tooling</h2>
+              <h2>Translation Specialties</h2>
               <ul>
-                <li>Git and GitHub</li>
-                <li>VS Code & Extensions</li>
-                <li>Docker</li>
-                <li>Figma & Adobe Photoshop</li>
-                <li>Excel VBA</li>
+                <li>Software and Information Technology</li>
+                <li>Technical and Academic Documents</li>
+                <li>Literary Translation</li>
+                <li>Video Games</li>
               </ul>
             </div>
           </div>

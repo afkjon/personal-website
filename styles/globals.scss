@@ -2,11 +2,13 @@
   
 :root {
   --max-width: 1080px;
-  --background-color: #fdf1de;
-  --foreground-color: #FEFEFE;
-  --accent-color: #66cc99;
+  --font-color: #fcfcdb;
+  --background-color: #29292c;
+  --foreground-color: #383837;
+  --accent-color: #D36135;
+  --navbar-color: #7FB069;
   --secondary-accent-color: #ec9ada;
-  --link-color: rgb(184, 62, 93);
+  --link-color: #E6AA68;
 }
 
 * {
@@ -23,6 +25,7 @@ body {
 }
 
 body {
+  color: var(--font-color);
   background: var(--background-color);
   font-family: 'Martel', serif;
 }
